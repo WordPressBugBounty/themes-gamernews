@@ -37,7 +37,8 @@ add_theme_support('custom-background', apply_filters('morenews_custom_background
 )));
 
 
-function gamernews_custom_header_setup($default_custom_header){
+function gamernews_custom_header_setup($default_custom_header)
+{
     $default_custom_header['default-text-color'] = 'ffffff';
     return $default_custom_header;
 }
@@ -45,22 +46,22 @@ add_filter('morenews_custom_header_args', 'gamernews_custom_header_setup', 1);
 
 function gamernews_filter_default_theme_options($defaults)
 {
-    $defaults['select_header_image_mode']  = 'above';   
-    $defaults['select_popular_tags_mode']  = 'category';  
+    $defaults['select_header_image_mode']  = 'above';
+    $defaults['select_popular_tags_mode']  = 'category';
     $defaults['global_site_mode_setting']    = 'aft-dark-mode';
     $defaults['dark_background_color']     = '#1A1A1A';
     $defaults['site_title_font_size'] = 64;
     $defaults['site_title_uppercase']  = 0;
     $defaults['disable_header_image_tint_overlay']  = 1;
-    $defaults['show_primary_menu_desc']  = 0;    
-    $defaults['flash_news_title'] = __('Breaking News', 'gamernews');    
-    $defaults['aft_custom_title']           = __('Watch Video', 'gamernews');  
+    $defaults['show_primary_menu_desc']  = 0;
+    $defaults['flash_news_title'] = __('Breaking News', 'gamernews');
+    $defaults['aft_custom_title']           = __('Watch Video', 'gamernews');
     $defaults['secondary_color'] = '#E72B99';
-    $defaults['select_update_post_filterby'] = 'cat';       
+    $defaults['select_update_post_filterby'] = 'cat';
     $defaults['global_show_min_read'] = 'no';
     $defaults['frontpage_content_type']  = 'frontpage-widgets-and-content';
-    $defaults['featured_news_section_title'] = __('Featured News', 'gamernews');      
-    $defaults['single_related_posts_title']     = __( 'Related News', 'gamernews' );    
+    $defaults['featured_news_section_title'] = __('Featured News', 'gamernews');
+    $defaults['single_related_posts_title']     = __('Related News', 'gamernews');
     return $defaults;
 }
 add_filter('morenews_filter_default_theme_options', 'gamernews_filter_default_theme_options', 1);
