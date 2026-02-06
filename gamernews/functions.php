@@ -58,7 +58,6 @@ function gamernews_filter_default_theme_options($defaults)
     $defaults['aft_custom_title']           = __('Watch Video', 'gamernews');
     $defaults['secondary_color'] = '#E72B99';
     $defaults['select_update_post_filterby'] = 'cat';
-    $defaults['global_show_min_read'] = 'no';
     $defaults['frontpage_content_type']  = 'frontpage-widgets-and-content';
     $defaults['featured_news_section_title'] = __('Featured News', 'gamernews');
     $defaults['single_related_posts_title']     = __('Related News', 'gamernews');

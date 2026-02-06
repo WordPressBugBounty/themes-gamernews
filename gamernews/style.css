@@ -5,10 +5,10 @@ Author:     AF themes
 Author URI: https://afthemes.com/
 Description: GamerNews is a dark-mode, design-forward WordPress child theme on the MoreNews system for gaming blogs, eSports magazines, tech review sites and streamer hubs; it offers high-contrast visual palettes (purple/pink accents), customizable light/dark toggles, pre-designed demo layouts optimized for reviews and live-updates, header & footer builder support and drag-and-drop compatibility with Elementor, Beaver Builder, Brizy, Visual Composer, Divi and SiteOrigin for rapid customization; GamerNews is lightweight, AMP-ready, SEO and Core Web Vitals optimized for low TTFB and smooth pages, includes custom widgets for review scores and social feeds, integrates with WooCommerce for selling gear or merch, supports Jetpack, Contact Form 7 and Yoast SEO, and ships with multilingual and RTL demos — pick GamerNews if you want a bold, high-performance theme that stands out in the gaming and tech vertical. https://afthemes.com/products/gamernews/
 Template: morenews
-Version: 1.1.3
-Requires at least: 5.0
+Version: 1.1.20
+Requires at least: 4.0
 Requires PHP: 5.0
-Tested up to: 6.8
+Tested up to: 6.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gamernews
@@ -166,6 +166,11 @@ a.morenews-categories.category-color-3 {
 
 .aft-default-mode .entry-content>.wp-block-heading a:not(.has-link-color) {
     border-color: #E72B99;
+}
+
+.aft-default-mode .entry-content .wp-block-heading:not(.has-link-color):not(.wp-block-post-title) a,
+.entry-content > p:not(.has-link-color) a, .entry-content > p:not(.has-link-color) a:visited{
+    color: #E72B99;
 }
 
 footer.site-footer {
@@ -432,6 +437,59 @@ body.single-post .aft-image-caption {
     font-size: 14px;
 }
 
+.aft-dark-mode .post-page-numbers,
+.aft-dark-mode .morenews-pagination .nav-links .page-numbers{
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+span.post-page-numbers.current,
+.morenews-pagination .nav-links .page-numbers.current{
+    color: #fff;
+    background: #212121;
+}
+
+.post-page-numbers,
+.morenews-pagination .nav-links .page-numbers.current,
+.morenews-pagination .nav-links .page-numbers{
+    min-width: 30px;
+}
+
+.entry-content li ol:not([class*="wp-"]) ,
+.entry-content li ul:not([class*="wp-"]) {
+    padding-bottom: 0px;
+    padding-top: 5px;
+}
+
+input.search-field{
+    font-size: 16px;
+}
+
+.author-info {
+    font-size: inherit;
+}
+
+.entry-content li > ol, .entry-content li > ul, .comments-area li > ol, .comments-area li > ul {
+    margin: 5px 0 5px 20px !important;
+    padding-left: 0;
+}
+
+.entry-content li [class^="wp-block-"] {
+    margin-bottom: 5px;
+}
+
+.entry-content section.morenews-author-bio {
+    margin-top: 24px;
+}
+
+span.wpcf7-list-item label {
+    display: flex;
+    align-items: center;
+}
+form.wpcf7-form label input[type="checkbox"]{
+    width: unset;
+    margin: 0 10px 0 0;
+}
 
 @media only screen and (max-width: 375px) {
     body .site-branding .site-title {
