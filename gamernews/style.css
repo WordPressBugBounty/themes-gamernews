@@ -5,7 +5,7 @@ Author:     AF themes
 Author URI: https://afthemes.com/
 Description: GamerNews is a design-forward, dark-mode WordPress child theme of MoreNews for gaming reviews, eSports, and tech magazines. It features high-contrast visual palettes, light/dark toggles, and demo layouts specifically optimized for live updates and reviews. The theme supports the MoreNews header and footer builder and is compatible with major drag-and-drop page builders for rapid customization. Optimized for low TTFB and Core Web Vitals, it includes custom widgets for review scores and social feeds. It is AMP-ready, WooCommerce-integrated, and ships with multilingual and RTL-ready demo content for global audiences. https://afthemes.com/products/gamernews/
 Template: morenews
-Version: 2.0.4
+Version: 2.1.0
 Requires at least: 4.0
 Requires PHP: 5.0
 Tested up to: 7.0
@@ -254,4 +254,11 @@ pre.wp-block-verse {padding: 20px;background-color: #efefef;}
     body.single-post .entry-title, body h1.page-title {
         font-size: 24px;
     }
+}
+
+.aft-dark-mode .wp-block-archives-list.wp-block-archives a:not(.has-text-color):hover,
+.aft-dark-mode .wp-block-latest-posts a:not(.has-text-color):hover, 
+.aft-dark-mode .wp-block-categories-list.wp-block-categories a:not(.has-text-color):hover,
+.aft-dark-mode .wp-block-latest-comments li.wp-block-latest-comments__comment a:hover {
+    color: #fff;
 }
